@@ -1,0 +1,11 @@
+#AboutArea{
+    padding: 120px 0px 120px;
+    position: relative;
+    overflow: hidden;
+    @media(max-width:991px) and (min-width:768px){
+        padding: 50px 0px 50px;
+    }
+    @media(max-width:767px) {
+        padding: 20px 0px 20px;
+    }
+}
