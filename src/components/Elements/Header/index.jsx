@@ -13,8 +13,12 @@ import { GrFormClose } from "react-icons/gr"
 
 const Header = () => {
   const [active, setActive] = React.useState(false)
-  const option = () => {
+  const optionRemove = () => {
     document.getElementsByTagName("html")[0].removeAttribute("class", `${Style.Noscroll}`)
+    setActive(!active)
+  }
+  const optionAdd = () => {
+    document.getElementsByTagName("html")[0].setAttribute("class", `${Style.Noscroll}`)
     setActive(!active)
   }
   return (
@@ -29,32 +33,32 @@ const Header = () => {
           <nav className={active ? `${Style.active}` : `${Style.nav}`}>
             <ul>
               <li>
-                <Link to="/" onClick={option}>
+                <Link to="/" onClick={optionRemove}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/"  onClick={option}>
+                <Link to="/"  onClick={optionRemove}>
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/"  onClick={option}>
+                <Link to="/"  onClick={optionRemove}>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/"  onClick={option}>
+                <Link to="/"  onClick={optionRemove}>
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/"  onClick={option}>
+                <Link to="/"  onClick={optionRemove}>
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/"  onClick={option}>
+                <Link to="/"  onClick={optionRemove}>
                   Contact
                 </Link>
               </li>
@@ -69,22 +73,14 @@ const Header = () => {
             {active ? (
               <div
                 className={Style.closeIcon}
-                onClick={() => {
-                  document
-                    .getElementsByTagName("html")[0]
-                    .removeAttribute("class", `${Style.Noscroll}`)
-                }}
+                onClick={optionRemove}
               >
                 <GrFormClose />
               </div>
             ) : (
               <div
                 className={Style.menuIcon}
-                onClick={() => {
-                  document
-                    .getElementsByTagName("html")[0]
-                    .setAttribute("class", `${Style.Noscroll}`)
-                }}
+                onClick={optionAdd}
               >
                 <GoThreeBars />
               </div>
