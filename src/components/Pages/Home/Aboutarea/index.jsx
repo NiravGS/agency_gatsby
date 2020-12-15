@@ -65,8 +65,8 @@ const AboutArea = () => {
                 reprehenderit quisquam recusandae ratione et sunt impedit ad!
                 ipsum dolor.
               </p>
-              <div className={Style.infoBtn}>
-                <Link to="/">Learn More</Link>
+              <div >
+                <Link to="/" className={`${"btn"} ${Style.infoBtn}`}>Learn More</Link>
               </div>
             </div>
           </Col>

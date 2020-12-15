@@ -3,6 +3,7 @@ import Header from "../components/Elements/Header"
 import HomeElement from "../components/Pages/Home/HomeElement"
 import AboutArea from "../components/Pages/Home/Aboutarea"
 import WhyChooseUs from "../components/Pages/Home/WhyChooseUs"
+import SectionRight from "../components/Pages/Home/AboutRightSection"
 
 // style
 import "../Sass/global.scss"
@@ -24,9 +25,9 @@ const IndexPage = () => {
   }, [])
   return (
     <>
-      <section id="header">
+      <div id="header">
         <Header />
-      </section>
+      </div>
       <section id="homeElement">
         <HomeElement />
       </section>
@@ -35,6 +36,9 @@ const IndexPage = () => {
       </section>
       <section id={Style.WhyChooseUs}>
         <WhyChooseUs />
+      </section>
+      <section id={Style.SectionRight}>
+        <SectionRight />
       </section>
     </>
   )

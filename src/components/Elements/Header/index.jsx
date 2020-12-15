@@ -66,22 +66,14 @@ const Header = () => {
           </nav>
           <div
             className={Style.menuToggle}
-            onClick={() => {
-              setActive(!active)
-            }}
+            onClick={() => {setActive(!active)}}
           >
             {active ? (
-              <div
-                className={Style.closeIcon}
-                onClick={optionRemove}
-              >
+              <div className={Style.closeIcon} onClick={optionRemove}>
                 <GrFormClose />
               </div>
             ) : (
-              <div
-                className={Style.menuIcon}
-                onClick={optionAdd}
-              >
+              <div className={Style.menuIcon} onClick={optionAdd}>
                 <GoThreeBars />
               </div>
             )}

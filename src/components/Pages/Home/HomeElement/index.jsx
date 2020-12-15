@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql,Link } from "gatsby"
 import Img from "gatsby-image"
 import { FaChevronRight } from "react-icons/fa"
 import { BsPlayFill } from "react-icons/bs"
@@ -43,8 +43,8 @@ const Aboutarea = () => {
                 <h1>Cognitive Solutions For Cybersecurity</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim nmmet, consectetur adiinamon</p>
                 <div className={Style.headerButton}>
-                  <a href="#" className={Style.btn}>Discover More <FaChevronRight /></a>
-                  <a href="#" className={Style.btn}>Get A Quote <FaChevronRight /></a>
+                  <Link href="#" className={`${"btn"}`}>Discover More <FaChevronRight /></Link>
+                  <Link href="#" className={`${"btn"}`}>Get A Quote <FaChevronRight /></Link>
                 </div>
               </div>
             </Col>

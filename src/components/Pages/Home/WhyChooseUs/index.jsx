@@ -5,34 +5,30 @@ import Img from "gatsby-image"
 import { FaChevronRight } from "react-icons/fa"
 import { BsPlayFill } from "react-icons/bs"
 
+import Title from "./Elements/Title"
+import Video from "./Elements/Video"
 
 // Style
 import Style from "./Sass/Style.module.scss"
 
-
-
-
-
 const WhyChooseUs = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "header-video-image.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000 ) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`)
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
-  }
-
   return (
     <>
-      <div className={Style.headerBanner}>
-        
+      <div className={Style.videoBanner}>
+        <div className={Style.background}></div>
+        <img
+          src={require("../../../../Images/whychooseUs/bgshape1.png")}
+          className={Style.shape1}
+          alt=""
+        />
+        <Container>
+          <Row className={`${"justify-content-center"}`}>
+            <Title />
+          </Row>
+          <Row className={`${"justify-content-center"}`}>
+            <Video />
+          </Row>
+        </Container>
       </div>
     </>
   )
